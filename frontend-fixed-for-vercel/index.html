@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chatbot Arena Clone</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Chatbot Arena Clone</h1>
+      <p>Compare two bots side-by-side with different tools / modes.</p>
+    </header>
+
+    <section class="controls">
+      <div class="panel-config">
+        <h2>Left Bot</h2>
+        <label>
+          Bot:
+          <select id="left-bot-select"></select>
+        </label>
+        <label>
+          Tool:
+          <select id="left-tool-select"></select>
+        </label>
+      </div>
+
+      <div class="panel-config">
+        <h2>Right Bot</h2>
+        <label>
+          Bot:
+          <select id="right-bot-select"></select>
+        </label>
+        <label>
+          Tool:
+          <select id="right-tool-select"></select>
+        </label>
+      </div>
+    </section>
+
+    <section class="prompt-section">
+      <textarea id="prompt-input" placeholder="Type your prompt here..."></textarea>
+      <button id="send-button">Send to Both</button>
+    </section>
+
+    <section class="arena">
+      <div class="chat-panel" id="left-panel">
+        <h3 id="left-panel-title">Left Bot</h3>
+        <div class="messages" id="left-messages"></div>
+      </div>
+      <div class="chat-panel" id="right-panel">
+        <h3 id="right-panel-title">Right Bot</h3>
+        <div class="messages" id="right-messages"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
